@@ -1,0 +1,11 @@
+[package]
+name = "advent-of-code-2021"
+version = "0.1.0"
+authors = ["Daniel Cannell"]
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+regex = "1.5"
+lazy_static = "1.4"
+
