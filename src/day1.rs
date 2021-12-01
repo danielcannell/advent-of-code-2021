@@ -9,9 +9,14 @@ pub fn solve() {
 }
 
 fn part1(input: &[i32]) -> i32 {
-    panic!("No answer found")
+    count_increasing(input)
 }
 
 fn part2(input: &[i32]) -> i32 {
-    panic!("No answer found")
+    let smoothed: Vec<i32> = input.windows(3).map(|w| w.iter().sum()).collect();
+    count_increasing(&smoothed)
+}
+
+fn count_increasing(samples: &[i32]) -> i32 {
+    samples.windows(2).filter(|&w| w[1] > w[0]).count() as i32
 }
